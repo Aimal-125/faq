@@ -1,0 +1,296 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+}
+* {
+	box-sizing: border-box;
+	font-family: sans-serif; 
+}
+.attribution { 
+	font-size: 11px; 
+	text-align: center;
+	margin-top: 1rem;
+}
+.attribution a { 
+	color: white;
+	text-decoration: none;
+}
+.mdiv {
+	display: none;
+}
+#mpic {
+	display: none;
+}
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+.card {
+	width: 90%;
+	height: 80%;
+	display: flex;
+	background: white;
+	border-radius: 20px;
+}
+.div1 {
+	width: 50%;
+	display: flex;
+	position: relative;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+.div0 {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.div1 img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.imgdiv1 {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: -100px;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+.imgdiv2 {
+	position: absolute;
+	width: 30%;
+	height: 30%;
+	top: 38%;
+	left: 0;
+	transform: translate(-50%);
+	z-index: 2;
+	transition: all 0.3s;
+}
+.imgdiv3 {
+	position: absolute;
+	width: 170%;
+	height: 135%;
+	top: 0;
+	right: 50%;
+	transform: translate(19%, -15%);
+	rotate: 360deg;
+}
+.div2 {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	position: relative;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	padding: 1.5rem;
+}
+.arrow {
+	transform: rotate(0deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	height: 100%;
+}
+.p1, .p2, .p3, .p4, .p5 {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	height: 40px;
+	border: none;
+	background: white;
+	margin-top: 5px;
+	font-size: 2vh;
+}
+.accordian button:hover {
+	color: hsl(14, 88%, 65%);
+}
+.accordian button:focus {
+	font-weight: bold;
+}
+.hidetxt {
+	display: none;
+	color: rgba(0, 0, 0, 0.5);
+	padding-bottom: 0.5rem;
+	font-size: 2vh;
+}
+.accord {
+	height: 100%; 
+	display: flex;
+	flex-direction: column;
+	padding-top: 2rem;
+}
+.accordian {
+	border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.card:hover .imgdiv2 {
+	left: -15px;
+}
+.hd {
+	margin-top: 5rem;
+	font-size: 3vh;
+}
+
+@media screen and (max-width: 1200px) {
+	.card:hover .imgdiv2 {
+		left: -5px;
+	}
+	.container {
+		padding: 2rem;
+	}
+	.card {
+		width: 100%;
+		height: 100%;
+	}
+	.div2 {
+		padding: 0;
+	}
+	.accord {
+		padding: 0;
+	}
+	.accordian button {
+		font-size: 1.5vh;
+	}
+	.accordian p {
+		font-size: 1.5vh;
+	}
+	.accordian button:focus {
+		font-weight: initial;
+	}
+	.imgdiv2 {
+		width: 20%;
+		height: 20%;
+	}
+	.card:hover .imgdiv2 {
+		left: -2px;
+	}
+}
+
+@media screen and (max-height: 500px) {
+	.container {
+		height: 200vh;
+		padding: 2rem;
+	}
+	.card {
+		width: 100%;
+		height: 70%;
+	}
+	.accordian button {
+		font-size: 2.5vh;
+	}
+	.accordian p {
+		font-size: 2.5vh;
+	}
+	.accordian button:focus {
+		font-weight: initial;
+	}
+	.hd {
+		font-size: 4vh;
+		margin-top: 0;
+	}
+	.card:hover .imgdiv2 {
+		left: 0;
+	}
+	.div2 {
+		padding: 1rem;
+	}
+}
+@media screen and (orientation: portrait) {
+	.container {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 170vh;
+	}
+	.card {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 90%;
+		height: 70%;
+	}
+	.div1 {
+		width: 100%;
+		height: 0;
+		position: initial;
+		display: none;
+	}
+	.imgdiv1, .imgdiv2, .imgdiv3 {
+		position: initial;
+		height: initial;
+		width: initial;
+	}
+	.div2 {
+		width: 100%;
+		height: 100%;
+		padding: 2rem;
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+	.mdiv {
+		display: block;
+		width: 250px;
+		height: 20%;
+		position: absolute;
+		transform: translateY(-260%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.mdiv img {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	#mpic {
+		display: block;
+		position: absolute;
+		top: 0px;
+	}
+}
+@media screen and (min-width: 2000px) {
+	.card {
+		padding: 0;
+	}
+	.accordian {
+		padding: 1.5rem 0;
+	}
+	.accordian p {
+		padding: 1.5rem 0;
+	}
+	.card:hover .imgdiv2 {
+		left: -15px;
+	}
+	.mdiv {
+		transform: translateY(-255%);
+	}
+	.container {
+		height: 100vh;
+	}
+	.card {
+		width: 60%;
+		height: 60%;
+	}
+	.accordian button {
+		font-size: 1vh;
+	}
+	.accordian p {
+		font-size: 1vh;
+	}
+}
